@@ -1,0 +1,273 @@
+#castle{
+  animation: spookyFlash 2.8s ease-in-out 1;
+}
+
+#start-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  cursor: pointer;
+  background: transparent;
+}
+
+@keyframes spookyFlash{
+ 0%{ 
+   filter: brightness(100%);
+ } 5%{
+   filter:brightness(500%);
+ } 10%{
+   filter:brightness(100%);
+   } 50%{
+   filter:brightness(100%);
+   } 55%{
+   filter:brightness(500%);
+   } 60%{
+   filter:brightness(100%);
+   } 65%{
+   filter:brightness(500%);
+   } 70%{
+   filter:brightness(100%);
+   } 100%{
+   filter:brightness(100%);
+   }
+ } 
+
+
+ .project {
+  position: relative;
+  width: 100%; 
+  height: 100vh;
+  overflow: visible;
+  z-index: 1;
+}
+
+ .scene {
+  position: absolute;
+  width: 100%; 
+  height: 100vh;
+    top: 0; left: 0;
+}
+
+
+
+.fade-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fade-image.show,
+.scene-2.show {
+  opacity: 1;
+}
+
+
+
+
+
+.scene-2 {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+align-items: center;
+}
+
+
+#hallway {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.pinimg.com/originals/7e/3d/e0/7e3de0d949615500e0084671921ded1c.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+
+#hallway-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#lamp{
+  position: absolute;
+top: 35%;
+left:63%;
+width:210px;
+height: auto;
+  transition: opacity 10s ease-in-out, filter 2s ease-in-out;
+  filter: grayscale(75%);
+  z-index: 10;
+pointer-events: auto;
+cursor: pointer;
+transform: rotate(5deg);
+ }
+
+#lamp.on {
+background: radial-gradient(ellipse at center, yellow, transparent 50%);
+  filter: none;
+ }
+
+#footprints{
+  position: absolute;
+  top:80%;
+  left: 30%;
+  width:300px;
+  height: auto;
+ transition: opacity 2s ease-in-out, filter 2s ease-in-out;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+#footprints.visible {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px #00f5d4);
+
+}
+
+
+
+#scooby-tag{
+  position: relative;
+pointer-events: none;
+opacity: 0;
+  display: block;
+  z-index: 12;
+width: 100%;
+height: auto;
+left: 65%;
+}
+
+#scooby-tag.visible{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#checker-wrapper{
+position: relative;
+
+}
+
+
+#tag-holder{
+position: relative;
+pointer-events: none;
+
+
+
+}
+
+
+#checker{
+  position: relative;
+pointer-events: none;
+  z-index: 13;
+  opacity: 0;
+  display: none;
+  width: fit-content;
+  height: fit-content;
+}
+
+#checker.visible{
+  opacity: 1;
+  pointer-events: auto;
+  display: block;
+}
+
+#text-input{
+pointer-events: auto;
+position: absolute;
+display: block;
+margin: 20px auto;
+top: 40%;
+left: 115%;
+width: 330px;
+height: 80px;
+font-size: 40px;
+font-family: "Luckiest Guy", cursive;
+  transform: translateX(-50%);
+opacity: 0;
+z-index: 13;
+}
+
+#text-input.visible{
+opacity:1;
+
+}
+
+#check-btn{
+pointer-events: auto;
+position: absolute;
+display: block;
+margin: 20px auto;
+top: 70%;
+left: 99%;
+font-size: 40px;
+font-family: "Luckiest Guy", cursive;
+color: #ffde32;
+background-color: #0cc0df;
+border-radius:55%;
+transform: none;
+opacity: 0;
+z-index: 13;
+}
+
+#check-btn.visible{
+opacity: 1;
+}
+
+#corner-tag{
+position: absolute;
+top: 30%;
+left: 50.4%;
+width: 40px;
+height: auto;
+pointer-events: auto;
+z-index: 10;
+transform: rotate(10deg);
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
+}
+
+#corner-tag.visible{
+opacity: 1;
+pointer-events: auto;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0px; left: 0px;
+  width: 100%; height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease, filter 0.5s ease;
+  z-index: 9;
+
+}
+
+.overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
